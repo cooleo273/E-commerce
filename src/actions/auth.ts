@@ -10,7 +10,6 @@ import type { User, Session } from "@prisma/client";
 import prisma from "@/lib/primsa";
 import { cookies } from "next/headers";
 import { cache } from "react";
-import { error } from "console";
 
 export async function generateSessionToken(): Promise<string> {
   const bytes = new Uint8Array(20);
