@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import img from "../../../public/icons8-menu.svg";
 import Link from "next/link";
 
 const AnnouncementBar = () => {
