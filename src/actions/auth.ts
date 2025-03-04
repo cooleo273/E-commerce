@@ -154,7 +154,7 @@ export const registerUser = async (email: string, password: string) => {
   } catch (error) {
     return {
       user: null,
-      error: "Failed to register user",
+      error: error,
     };
   }
 };
