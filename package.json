@@ -13,6 +13,7 @@
     "@oslojs/encoding": "^1.1.0",
     "@prisma/client": "^6.4.1",
     "next": "15.2.1",
+    "oslo": "^1.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "zod": "^3.24.2",
@@ -28,6 +29,23 @@
     "eslint-config-next": "15.2.1",
     "prisma": "^6.4.1",
     "tailwindcss": "^4",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@prisma/engines",
+      "esbuild",
+      "sharp",
+      "prisma",
+      "@prisma/client"
+    ],
+    "onlyBuiltDependencies": [
+      "@prisma/engines",
+      "esbuild",
+      "sharp",
+      "prisma",
+      "@prisma/client"
+    ]
   }
 }
