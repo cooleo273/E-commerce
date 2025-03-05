@@ -23,7 +23,6 @@ const SignInPage = async () => {
   ): Promise<{ message: string } | undefined> => {
     "use server";
     const parsed = SignUpSchema.safeParse(Object.fromEntries(formData));
-    console.log(parsed);
     if (!parsed.success) {
       return { message: "Invalid form data" };
     }
