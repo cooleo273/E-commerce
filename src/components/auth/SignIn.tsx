@@ -2,21 +2,9 @@
 import React from "react";
 import { useFormState } from "react-dom";
 import { Button } from "../ui/button";
+import { initialState, SignInProps } from "./types";
 
-export type FormState = {
-  message: string;
-};
 
-export type SignInProps = {
-  action: (
-    prevState: FormState | undefined,
-    formData: FormData
-  ) => Promise<{ message: string } | undefined>;
-};
-
-const initialState: FormState = {
-  message: "",
-};
 
 const SignIn = ({ action }: SignInProps) => {
   const [state, formAction] = useFormState(action, initialState);
