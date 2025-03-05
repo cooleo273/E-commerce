@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { User } from "@prisma/client";
 import { logoutUser } from "@/actions/auth";
 import { useRouter } from "next/navigation";
+import { HeaderProps } from "./types";
 
 const AnnouncementBar = () => {
   return (
@@ -17,9 +17,7 @@ const AnnouncementBar = () => {
   );
 };
 
-type HeaderProps = {
-  user: Omit<User, "passwordHash"> | null;
-};
+
 const Header = ({ user }: HeaderProps) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState<boolean>(false);
