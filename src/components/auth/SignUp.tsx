@@ -1,21 +1,9 @@
 "use client";
 import React from "react";
 import { useFormState } from "react-dom";
+import { initialState, SignUpProps } from "./types";
 
-export type FormState = {
-  message: string;
-};
 
-export type SignUpProps = {
-  action: (
-    prevState: FormState | undefined,
-    formData: FormData
-  ) => Promise<{ message: string } | undefined>;
-};
-
-const initialState: FormState = {
-  message: "",
-};
 
 const SignUp = ({ action }: SignUpProps) => {
   const [state, formAction] = useFormState(action, initialState);
