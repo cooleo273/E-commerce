@@ -1,5 +1,4 @@
 "use client";
-import { Product } from "@/sanity.types";
 import React from "react";
 import {
   Card,
@@ -12,10 +11,9 @@ import {
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { Button } from "../ui/button";
+import { ProductItemProps } from "./types";
 
-type ProductItemProps = {
-  product: Product;
-};
+
 
 const ProductItem = ({ product }: ProductItemProps) => {
   return (
