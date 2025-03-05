@@ -32,8 +32,8 @@ const SignUpPage = async () => {
       return { message: typeof error === "string" ? error : "Registration failed" };
     } else if (user) {
       await loginUser(email, password);
-      redirect("/");
-      return;
+      return redirect("/");
+      
     }
   };
 
