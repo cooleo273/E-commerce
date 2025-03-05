@@ -1,5 +1,6 @@
 import { getCurrentSession, loginUser } from "@/actions/auth";
 import SignIn from "@/components/auth/SignIn";
+import { FormState } from "@/components/auth/types";
 import { redirect } from "next/navigation";
 import React from "react";
 import zod from "zod";
@@ -9,7 +10,7 @@ const SignUpSchema = zod.object({
   password: zod.string().min(6),
 });
 
-type FormState = { message: string };
+
 
 const SignInPage = async () => {
   const { user } = await getCurrentSession();
