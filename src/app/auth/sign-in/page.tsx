@@ -1,4 +1,4 @@
-import { getCurrentSession, loginUser, registerUser } from "@/actions/auth";
+import { getCurrentSession, loginUser } from "@/actions/auth";
 import SignIn from "@/components/auth/SignIn";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -23,6 +23,7 @@ const SignInPage = async () => {
   ): Promise<{ message: string } | undefined> => {
     "use server";
     const parsed = SignUpSchema.safeParse(Object.fromEntries(formData));
+    console.log(parsed);
     if (!parsed.success) {
       return { message: "Invalid form data" };
     }

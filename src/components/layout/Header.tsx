@@ -69,7 +69,7 @@ const Header = ({ user }: HeaderProps) => {
                 <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"></path>
               </svg>
             </button>
-            <nav className="hidden md:flex gap-6 lg:gap-8 text-sm lg:text-lg font-medium tracking-wide">
+            <nav className="hidden md:flex gap-6 lg:gap-8 text-sm lg:text-md font-medium tracking-wide">
               <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
               <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
               <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
@@ -111,10 +111,10 @@ const Header = ({ user }: HeaderProps) => {
               </div>
             ) : (
               <div className="flex items-center gap-4">
-                <Link href="/auth/sign-in" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-lg">
+                <Link href="/auth/sign-in" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-md">
                   Sign In
                 </Link>
-                <Link href="/auth/sign-up" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-lg">
+                <Link href="/auth/sign-up" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-md">
                   Sign Up
                 </Link>
               </div>
